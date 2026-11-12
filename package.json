@@ -1,0 +1,16 @@
+{
+  "name": "simple-message-board",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A minimal message submission website with JSON file storage",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

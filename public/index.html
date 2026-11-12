@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leave a message.">
+  <title>Leave a Message</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="message-panel" aria-live="polite">
+      <div id="initialView">
+        <button id="openFormButton" class="primary-button" type="button">
+          Leave a Message
+        </button>
+      </div>
+
+      <form id="messageForm" class="message-form" hidden>
+        <label class="sr-only" for="messageInput">Your message</label>
+        <textarea
+          id="messageInput"
+          name="message"
+          maxlength="2000"
+          placeholder="Write your message here..."
+          rows="6"
+          required
+        ></textarea>
+        <div class="form-footer">
+          <span id="characterCount">0 / 2000</span>
+          <button id="submitButton" class="primary-button" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+
+      <p id="messageCount" class="message-count">Loading message count...</p>
+    </section>
+  </main>
+
+  <div id="successDialog" class="dialog-backdrop" hidden>
+    <div class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="dialogTitle">
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h2 id="dialogTitle">Message submitted</h2>
+      <p>Thank you for leaving a message.</p>
+      <button id="closeDialogButton" class="primary-button" type="button">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
